@@ -28,7 +28,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ lowercase(github.actor) }}
+          username: ${{ github.actors }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         run: |
@@ -50,7 +50,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ lowercase(github.actor)}}
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         run: |
